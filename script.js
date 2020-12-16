@@ -1,43 +1,40 @@
- let a = document.createElement("a");
- a.style.backgroundColor = 'orange';
- a.style.height = '5%';
- a.style.width = '90%';
- a.style.borderRadius = "5px";
- a.style.border = "2px solid black"
+ let torre1 = document.createElement("div")
+ torre1.classList.add("item");
 
- document.getElementById("torre1").appendChild(a);
+ let torre2 = document.createElement("div")
+ torre2.classList.add("item");
 
- let a2 = document.createElement("a");
- a2.style.backgroundColor = 'blue';
- a2.style.height = '5%';
- a2.style.width = '70%';
- a2.style.borderRadius = "5px";
- a2.style.border = "2px solid black"
+ let torre3 = document.createElement("div")
+ torre3.classList.add("item");
 
- document.getElementById("torre1").appendChild(a2);
+ document.getElementById('section').appendChild(torre1);
+ document.getElementById('section').appendChild(torre2);
+ document.getElementById('section').appendChild(torre3);
 
- let a3 = document.createElement("a");
- a3.style.backgroundColor = 'yellow';
- a3.style.height = '5%';
- a3.style.width = '50%';
- a3.style.borderRadius = "5px";
- a3.style.border = "2px solid black";
+ let a = document.createElement("div");
+ a.classList.add("discoUm");
+ torre1.appendChild(a);
 
- document.getElementById("torre1").appendChild(a3);
+ let a2 = document.createElement("div");
+ a2.classList.add("discoDois");
+ torre1.appendChild(a2);
 
- let a4 = document.createElement("a");
- a4.style.backgroundColor = 'red';
- a4.style.height = '5%';
- a4.style.width = '30%';
- a4.style.borderRadius = "5px";
- a4.style.border = "2px solid black";
+ let a3 = document.createElement("div");
+ a3.classList.add("discoTres");
+ torre1.appendChild(a3);
 
- document.getElementById("torre1").appendChild(a4);
+ let a4 = document.createElement("div");
+ a4.classList.add("discoQuatro");
+ torre1.appendChild(a4);
 
-let testeStart = document.getElementById('torre1');
 
-testeStart.addEventListener('click',  Start);
+ 
 
-function Start(event){
-    console.log(event.currentTarget.lastElementChild);
-}
+
+//let testeStart = document.getElementById(torre1);
+
+//testeStart.addEventListener('click',  Start);
+
+//function Start(event){
+//    console.log(event.currentTarget.lastElementChild);
+//}

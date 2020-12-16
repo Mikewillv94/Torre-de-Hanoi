@@ -28,8 +28,40 @@ body{
     flex-direction: column-reverse;
     align-items: center;
     margin: 5px;
-    border-bottom: 2px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     width: 30%;
     height:30vh;
+}
+
+.discoUm{
+    background-color: orange;
+    height: 5%;
+    width: 90%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.discoDois{
+    background-color: blue;
+    height: 5%;
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.discoTres{
+    background-color: yellow;
+    height: 5%;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.discoQuatro{
+    background-color: red;
+    height: 5%;
+    width: 30%;
+    border-radius: 5px;
+    border: 2px solid black;
 }
