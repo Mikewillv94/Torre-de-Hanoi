@@ -38,5 +38,32 @@ document.getElementById('section').appendChild(torre3);
     function setStart(e) {
         e.currentTarget.appendChild(disco);
         console.log(disco);
+        disco = null;       
     }
 
+    torre3.addEventListener('click', setStart);
+    function setStart(e) {
+        e.currentTarget.appendChild(disco);
+        console.log(disco);
+        disco=null;
+    }
+
+    torre2.addEventListener('click', getStart2);
+    function getStart2(e) {
+        disco2 = e.currentTarget.lastElementChild;
+        console.log(disco2);
+    }
+
+    torre3.addEventListener('click', setStart2);
+    function setStart2(e) {
+        e.currentTarget.appendChild(disco2);
+        console.log(disco2);
+        disco2=null;
+    }
+
+    torre1.addEventListener('click', setStart);
+    function setStart(e) {
+        e.currentTarget.appendChild(disco2);
+        console.log(disco2);
+        disco2=null;
+    }
