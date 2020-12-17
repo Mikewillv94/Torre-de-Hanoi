@@ -1,14 +1,11 @@
 let torre1 = document.createElement("div")
 torre1.classList.add("item");
-torre1.id = 't1';
 
 let torre2 = document.createElement("div")
 torre2.classList.add("item");
-torre2.id = 't2';
 
 let torre3 = document.createElement("div")
 torre3.classList.add("item");
-torre3.id = 't3';
 
 let a = document.createElement("div");
 a.classList.add("discoUm");
