@@ -34,7 +34,7 @@ torre3.addEventListener('click', getDisco);
 
 let disco;
 
-<<<<<<< HEAD
+
 function getDisco(e) {
 
     disco = e.currentTarget.lastElementChild;
@@ -47,13 +47,6 @@ function getDisco(e) {
         torre1.addEventListener('click', setDisco);
         torre2.addEventListener('click', setDisco);
         torre3.addEventListener('click', setDisco);
-=======
-    torre2.addEventListener('click', setStart);
-    function setStart(e) {
-        e.currentTarget.appendChild(disco);
-        console.log(disco);
-        disco = null;       
->>>>>>> 23f43836fc9b785eb525ef8a19b733417625ebb6
     }
 }
 
