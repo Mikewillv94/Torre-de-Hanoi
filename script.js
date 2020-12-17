@@ -27,18 +27,17 @@ document.getElementById('section').appendChild(torre1);
 document.getElementById('section').appendChild(torre2);
 document.getElementById('section').appendChild(torre3);
 
-
 torre1.addEventListener('click', getDisco);
 torre2.addEventListener('click', getDisco);
 torre3.addEventListener('click', getDisco);
 
 let disco;
 
-
 function getDisco(e) {
 
     disco = e.currentTarget.lastElementChild;
     console.log(disco);
+
     if(disco !== null){
         torre1.removeEventListener('click', getDisco);
         torre2.removeEventListener('click', getDisco);
@@ -51,7 +50,9 @@ function getDisco(e) {
 }
 
 function setDisco(e) {
+    
     e.currentTarget.appendChild(disco);
+    
     torre1.removeEventListener('click', setDisco);
     torre2.removeEventListener('click', setDisco);
     torre3.removeEventListener('click', setDisco);
@@ -60,4 +61,22 @@ function setDisco(e) {
     torre2.addEventListener('click', getDisco);
     torre3.addEventListener('click', getDisco);
 
+    arr =  e.currentTarget.children;
+
+    console.log(arr)
+
+    if(e.currentTarget.childElementCount > 1){
+
+        arr = e.currentTarget.children;
+
+        if(arr[arr.length -1].clientWidth > arr[arr.length -2].clientWidth){
+            
+            console.log("Erro!")
+        }
+    }
+
+    if(e.currentTarget.childElementCount > 3 && e.currentTarget !== torre1){
+
+        console.log("Vencedor!")
+    }
 }
