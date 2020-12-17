@@ -34,11 +34,9 @@ torre3.addEventListener('click', getDisco);
 
 let disco;
 
-<<<<<<< HEAD
-function getDisco(e) {
-
+function getDisco(e){
     disco = e.currentTarget.lastElementChild;
-    console.log(disco);
+
     if(disco !== null){
         torre1.removeEventListener('click', getDisco);
         torre2.removeEventListener('click', getDisco);
@@ -47,13 +45,6 @@ function getDisco(e) {
         torre1.addEventListener('click', setDisco);
         torre2.addEventListener('click', setDisco);
         torre3.addEventListener('click', setDisco);
-=======
-    torre2.addEventListener('click', setStart);
-    function setStart(e) {
-        e.currentTarget.appendChild(disco);
-        console.log(disco);
-        disco = null;       
->>>>>>> 23f43836fc9b785eb525ef8a19b733417625ebb6
     }
 }
 
@@ -68,31 +59,3 @@ function setDisco(e) {
     torre3.addEventListener('click', getDisco);
 
 }
-
-
-    torre3.addEventListener('click', setStart);
-    function setStart(e) {
-        e.currentTarget.appendChild(disco);
-        console.log(disco);
-        disco=null;
-    }
-
-    torre2.addEventListener('click', getStart2);
-    function getStart2(e) {
-        disco2 = e.currentTarget.lastElementChild;
-        console.log(disco2);
-    }
-
-    torre3.addEventListener('click', setStart2);
-    function setStart2(e) {
-        e.currentTarget.appendChild(disco2);
-        console.log(disco2);
-        disco2=null;
-    }
-
-    torre1.addEventListener('click', setStart);
-    function setStart(e) {
-        e.currentTarget.appendChild(disco2);
-        console.log(disco2);
-        disco2=null;
-    }
