@@ -36,7 +36,7 @@ document.getElementById('section').appendChild(torre3);
 
     torre2.addEventListener('click', setStart);
     function setStart(e) {
-        e.currentTarget.appendChild(disco);
-        console.log(disco);
+        e.currentTarget.appendChild(torre2);
+        console.log(torre2);
     }
 
