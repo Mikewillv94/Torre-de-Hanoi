@@ -28,7 +28,7 @@ subtitulo.innerHTML = 'As regras são:';
 
 let arrRegras = ["Movimentar uma só peça (disco) de cada vez.", "Uma peça maior não pode ficar acima de uma menor.", "Não é permitido movimentar uma peça que esteja abaixo de outra."]
 let lista = document.createElement('ol');
-for(let i= 0; i < arrRegras.length; i++){
+for (let i = 0; i < arrRegras.length; i++) {
     let li = document.createElement('li');
     li.innerHTML = arrRegras[i];
     lista.appendChild(li);
@@ -67,11 +67,11 @@ function getDisco(e) {
 
     disco = e.currentTarget.lastElementChild;
 
-    if(disco !== null){
+    if (disco !== null) {
         torre1.removeEventListener('click', getDisco);
         torre2.removeEventListener('click', getDisco);
         torre3.removeEventListener('click', getDisco);
-    
+
         torre1.addEventListener('click', setDisco);
         torre2.addEventListener('click', setDisco);
         torre3.addEventListener('click', setDisco);
@@ -79,9 +79,9 @@ function getDisco(e) {
 }
 
 function setDisco(e) {
-    
+
     e.currentTarget.appendChild(disco);
-    
+
     torre1.removeEventListener('click', setDisco);
     torre2.removeEventListener('click', setDisco);
     torre3.removeEventListener('click', setDisco);
@@ -90,9 +90,34 @@ function setDisco(e) {
     torre2.addEventListener('click', getDisco);
     torre3.addEventListener('click', getDisco);
 
+    arr = e.currentTarget.children;
+    if (e.currentTarget.childElementCount > 1) {
+        arr = e.currentTarget.children;
+        if (arr[arr.length - 1].clientWidth > arr[arr.length - 2].clientWidth) {
+            box.style.display = 'block';
+            erro.style.display = 'block';
+            botao.style.display = 'inline-block'
+        }
+    }
+    if (e.currentTarget.childElementCount > 3 && e.currentTarget !== torre1) {
+        erro.innerHTML = "Você Ganhou !"
+        box.appendChild(erro);
+        botao.innerHTML = "Jogar novamente";
+        box.appendChild(botao);
+        erro.style.display = 'block';
+        box.style.display = 'block';
+        botao.style.display = 'inline-block'
+    }
+    document.getElementsByTagName('button').onclick = function () {
+        document.location.reload(true);
+    }
 
 }
-    
+
+document.getElementById('button').onclick = function(){
+    document.location.reload(true);
+}
+
 
 
 

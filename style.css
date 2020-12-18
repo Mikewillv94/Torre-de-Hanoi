@@ -106,7 +106,7 @@ ol li{
     display: none;
 }
 
-@media (min-width: 600px){
+@media (min-width: 900px){
     .container{
         max-width: 900px;
     }
