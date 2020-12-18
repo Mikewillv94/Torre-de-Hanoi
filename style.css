@@ -66,3 +66,58 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
+
+ol{
+    padding-inline-start:20px;
+}
+
+ol li{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.box{
+    top: 100px;
+    width: 95%;
+    height: 35vh;
+    background-color: hsl(0, 0%, 50%, 0.3);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    display: none;
+}
+
+.erro{
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10vh;
+    display: none;
+}
+
+.box button{
+    display: none;
+}
+
+.botao2{
+    display: none;
+}
+
+@media (min-width: 600px){
+    .container{
+        max-width: 900px;
+    }
+
+}
+
+@media (min-width: 600px){
+
+    ol li{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+}

@@ -23,9 +23,38 @@ let a4 = document.createElement("div");
 a4.classList.add("discoQuatro");
 torre1.appendChild(a4);
 
+let subtitulo = document.createElement('h2');
+subtitulo.innerHTML = 'As regras são:';
+
+let arrRegras = ["Movimentar uma só peça (disco) de cada vez.", "Uma peça maior não pode ficar acima de uma menor.", "Não é permitido movimentar uma peça que esteja abaixo de outra."]
+let lista = document.createElement('ol');
+for(let i= 0; i < arrRegras.length; i++){
+    let li = document.createElement('li');
+    li.innerHTML = arrRegras[i];
+    lista.appendChild(li);
+}
+
+let box = document.createElement('div');
+box.classList.add("box");
+
+let erro = document.createElement("p")
+erro.classList.add("erro");
+erro.innerHTML = "Jogada Invalida <br> Regra 2."
+box.appendChild(erro);
+
+let botao = document.createElement("button");
+botao.onclick = "reset";
+botao.id = 'button';
+botao.innerHTML = "Reiniciar";
+box.appendChild(botao);
+
+
 document.getElementById('section').appendChild(torre1);
 document.getElementById('section').appendChild(torre2);
 document.getElementById('section').appendChild(torre3);
+document.body.appendChild(subtitulo);
+document.body.appendChild(lista);
+document.body.appendChild(box);
 
 
 torre1.addEventListener('click', getDisco);
@@ -34,7 +63,8 @@ torre3.addEventListener('click', getDisco);
 
 let disco;
 
-function getDisco(e){
+function getDisco(e) {
+
     disco = e.currentTarget.lastElementChild;
 
     if(disco !== null){
@@ -49,7 +79,9 @@ function getDisco(e){
 }
 
 function setDisco(e) {
+    
     e.currentTarget.appendChild(disco);
+    
     torre1.removeEventListener('click', setDisco);
     torre2.removeEventListener('click', setDisco);
     torre3.removeEventListener('click', setDisco);
@@ -58,4 +90,9 @@ function setDisco(e) {
     torre2.addEventListener('click', getDisco);
     torre3.addEventListener('click', getDisco);
 
+
 }
+    
+
+
+
